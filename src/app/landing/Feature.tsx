@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import getScrollAnimation from "@/utils/getScrollAnimation";
-import ScrollAnimationWrapper from "@/hoc/ScrollAnimationTrapper";
+import ScrollAnimationWrapper from "@/hoc/ScrollAnimationWrapper";
 
 const features = [
   "Powerfull online protection.",

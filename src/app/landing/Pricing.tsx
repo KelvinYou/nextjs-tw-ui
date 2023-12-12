@@ -5,10 +5,9 @@ import Image from "next/image";
 import Testimoni from "./Testimoni";
 import ButtonPrimary from "@/components/misc/ButtonPrimary";
 import ButtonOutline from "@/components/misc/ButtonOutline";
-import Maps from "/public/assets/HugeGlobal.svg";
 import { motion } from "framer-motion";
 import getScrollAnimation from "@/utils/getScrollAnimation";
-import ScrollAnimationWrapper from "@/hoc/ScrollAnimationTrapper";
+import ScrollAnimationWrapper from "@/hoc/ScrollAnimationWrapper";
 
 const Pricing = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
@@ -192,11 +191,18 @@ const Pricing = () => {
               locations.
             </motion.p>
           </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper>
-            <motion.div className="py-12 w-full px-8 mt-16" variants={scrollAnimation}> 
-              {/* <Maps className="w-full h-auto" /> */}
+
+          {/* <ScrollAnimationWrapper>
+            <motion.div className="py-12 w-full px-8 mt-16"> 
+              <Image 
+                src="/assets/HugeGlobal.svg" 
+                alt="Map"
+                fill
+                className="w-full h-auto"
+              />
             </motion.div>
-          </ScrollAnimationWrapper>
+          </ScrollAnimationWrapper> */}
+
           <ScrollAnimationWrapper>
             <motion.div className="w-full flex justify-evenly items-center mt-4 flex-wrap lg:flex-nowrap" variants={scrollAnimation}>
               {/* <Netflix className="h-18 w-auto" /> */}
@@ -227,6 +233,39 @@ const Pricing = () => {
               />
             </motion.div>
           </ScrollAnimationWrapper>
+
+          {/* <ScrollAnimationWrapper>
+            <motion.div className="w-full mt-4 overflow-x-hidden" variants={scrollAnimation}>
+              <motion.div className="flex animate-scroll py-4" initial="start" animate="end">
+                <img
+                  src="/assets/Icon/amazon.png"
+                  className="h-14 w-auto mt-4 lg:mt-2"
+                  alt=""
+                />
+                <img
+                  src="/assets/Icon/netflix.png"
+                  className="h-14 w-auto mt-2 lg:mt-0"
+                  alt=""
+                />
+                <img
+                  src="/assets/Icon/reddit.png"
+                  className="h-12 w-auto mt-2 lg:mt-0"
+                  alt=""
+                />
+                <img
+                  src="/assets/Icon/discord.png"
+                  className="h-14 w-auto mt-2 lg:mt-0"
+                  alt=""
+                />
+                <img
+                  src="/assets/Icon/spotify.png"
+                  className="h-12 w-auto mt-2 lg:mt-0"
+                  alt=""
+                />
+              </motion.div>
+
+            </motion.div>
+          </ScrollAnimationWrapper> */}
         </div>
         <div className="flex flex-col w-full my-16" id="testimoni">
           <ScrollAnimationWrapper>
@@ -243,11 +282,16 @@ const Pricing = () => {
               pleasure when using this crazy feature.
             </motion.p>
           </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper className="w-full flex flex-col py-12">
+          {/* <ScrollAnimationWrapper className="w-full flex flex-col py-12">
             <motion.div variants={scrollAnimation}>
               <Testimoni />
             </motion.div>
-          </ScrollAnimationWrapper>
+          </ScrollAnimationWrapper> */}
+          <div className="w-full flex flex-col py-12">
+            {/* <motion.div variants={scrollAnimation}> */}
+              {/* <Testimoni /> */}
+            {/* </motion.div> */}
+          </div>
           <ScrollAnimationWrapper className="relative w-full mt-16">
             <motion.div variants={scrollAnimation} custom={{duration: 3}}>
               <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">

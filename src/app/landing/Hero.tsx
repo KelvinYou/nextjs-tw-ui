@@ -4,7 +4,7 @@ import React, { useMemo } from "react";
 import Image from "next/image";
 import { motion, spring } from "framer-motion";
 import getScrollAnimation from "@/utils/getScrollAnimation";
-import ScrollAnimationWrapper from "@/hoc/ScrollAnimationTrapper";
+import ScrollAnimationWrapper from "@/hoc/ScrollAnimationWrapper";
 import ButtonPrimary from "@/components/misc/ButtonPrimary";
 
 const Hero = ({
