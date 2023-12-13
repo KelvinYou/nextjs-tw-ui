@@ -6,6 +6,7 @@ import { motion, spring } from "framer-motion";
 import getScrollAnimation from "@/utils/getScrollAnimation";
 import ScrollAnimationWrapper from "@/hoc/ScrollAnimationWrapper";
 import ButtonPrimary from "@/components/misc/ButtonPrimary";
+import AnimatedNumberCounter from "@/components/AnimatedNumberCounter";
 
 const Hero = ({
   listUser = [
@@ -76,7 +77,7 @@ const Hero = ({
                 </div>
                 <div className="flex flex-col">
                   <p className="text-xl text-black-600 font-bold">
-                    {listUsers.number}+
+                    <AnimatedNumberCounter initialValue={parseInt(listUsers.number)} duration={1} className="" />K+
                   </p>
                   <p className="text-lg text-black-500">{listUsers.name}</p>
                 </div>
